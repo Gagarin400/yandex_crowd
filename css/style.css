@@ -1031,6 +1031,12 @@ a {
     left: 8.23vw;
   }
 }
+@media (min-width: 1921px) {
+  .header__deco-img {
+    position: inherit;
+    margin: 0 auto;
+  }
+}
 @media (min-width: 1024px) {
   .container {
     padding: 0 72px;
