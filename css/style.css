@@ -586,8 +586,9 @@ a {
 .participants__nav {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex-shrink: 0;
+  margin-top: -5px;
 }
 
 .participants__counter {
