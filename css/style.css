@@ -1028,7 +1028,7 @@ a {
 
 @media (min-width: 1920px) {
   .header__deco-img {
-    left: 158px;
+    left: 8.23vw;
   }
 }
 @media (min-width: 1024px) {
@@ -1050,6 +1050,13 @@ a {
   }
   .header__buttons .btn {
     flex: 0 0 calc(50% - 8px);
+  }
+}
+
+@media (max-width: 1365px) {
+  .header .btn--outline {
+    background-color: #ffffff;
+    border-color: transparent;
   }
 }
 
