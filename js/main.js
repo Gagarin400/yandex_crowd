@@ -129,32 +129,30 @@
 
 
 (function initStagesCarousel() {
-  const track   = document.getElementById('stagesTrack');
-  const prevBtn = document.getElementById('stagesPrev');
-  const nextBtn = document.getElementById('stagesNext');
-  const counter = document.getElementById('stagesCounter');
+  const track      = document.getElementById('stagesTrack');
+  const prevBtn    = document.getElementById('stagesPrev');
+  const nextBtn    = document.getElementById('stagesNext');
+  const dotsWrap   = document.getElementById('stagesDots');
 
   if (!track || !prevBtn || !nextBtn) return;
 
   const isMobile = () => window.matchMedia('(max-width: 767px)').matches;
 
-  const cards = Array.from(track.querySelectorAll('.stage-card'));
-  const N = cards.length;
+  const slides = Array.from(track.querySelectorAll('.stage-slide'));
+  const N = slides.length;
   let current = 0;
   let isAnimating = false;
 
-  function getCardWidth() {
-    const card = cards[0];
-    if (!card) return 0;
+  function getSlideWidth() {
+    const slide = slides[0];
+    if (!slide) return 0;
     const gap = parseFloat(getComputedStyle(track).gap) || 0;
-    return card.getBoundingClientRect().width + gap;
+    return slide.getBoundingClientRect().width + gap;
   }
 
   function setPos(instant) {
-    if (instant) {
-      track.style.transition = 'none';
-    }
-    track.style.transform = `translateX(-${current * getCardWidth()}px)`;
+    if (instant) track.style.transition = 'none';
+    track.style.transform = `translateX(-${current * getSlideWidth()}px)`;
     if (instant) {
       track.getBoundingClientRect();
       track.style.transition = '';
@@ -162,9 +160,12 @@
   }
 
   function updateUI() {
-    if (counter) counter.textContent = `${current + 1} / ${N}`;
     prevBtn.disabled = current === 0;
     nextBtn.disabled = current === N - 1;
+    if (!dotsWrap) return;
+    dotsWrap.querySelectorAll('.stages__dot').forEach((dot, i) => {
+      dot.classList.toggle('stages__dot--active', i === current);
+    });
   }
 
   function goTo(idx) {

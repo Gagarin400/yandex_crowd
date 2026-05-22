@@ -130,36 +130,53 @@
           <p class="stages__subtitle">Будущие источники<br class="br-d"> обогащения<br class="br-m"> васюкинцев</p>
         </div>
       </div>
+      <img class="stages__plane-m" src="img/stages-airplane-mobile.png" alt="" aria-hidden="true">
       <div class="stages__viewport">
         <div class="stages__grid" id="stagesTrack">
-          <div class="stage-card fade-in">
-            <span class="stage-card__num">1</span>
-            <p class="stage-card__text">Строительство железнодорожной магистрали Москва-Васюки</p>
+
+          <div class="stage-slide">
+            <div class="stage-card stage-card--1 fade-in">
+              <span class="stage-card__num">1</span>
+              <p class="stage-card__text">Строительство железнодорожной магистрали Москва-Васюки</p>
+            </div>
+            <div class="stage-card stage-card--2 fade-in">
+              <span class="stage-card__num">2</span>
+              <p class="stage-card__text">Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</p>
+            </div>
           </div>
-          <div class="stage-card fade-in">
-            <span class="stage-card__num">2</span>
-            <p class="stage-card__text">Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</p>
+
+          <div class="stage-slide">
+            <div class="stage-card stage-card--3 fade-in">
+              <span class="stage-card__num">3</span>
+              <p class="stage-card__text">Поднятие сельского хозяйства в радиусе<br class="br-m"> на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</p>
+            </div>
           </div>
-          <div class="stage-card fade-in">
-            <span class="stage-card__num">3</span>
-            <p class="stage-card__text">Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</p>
+
+          <div class="stage-slide">
+            <div class="stage-card stage-card--4 fade-in">
+              <span class="stage-card__num">4</span>
+              <p class="stage-card__text">Строительство дворца<br> для турнира</p>
+            </div>
+            <div class="stage-card stage-card--5 fade-in">
+              <span class="stage-card__num">5</span>
+              <p class="stage-card__text">Размещение гаражей<br> для гостевого<br> автотранспорта</p>
+            </div>
           </div>
-          <div class="stage-card fade-in">
-            <span class="stage-card__num">4</span>
-            <p class="stage-card__text">Строительство дворца<br class="br-d">для турнира</p>
+
+          <div class="stage-slide">
+            <div class="stage-card stage-card--6 fade-in">
+              <span class="stage-card__num">6</span>
+              <p class="stage-card__text">Постройка сверхмощной радиостанции<br class="br-m"> для передачи всему миру сенсационных результатов</p>
+            </div>
           </div>
-          <div class="stage-card fade-in">
-            <span class="stage-card__num">5</span>
-            <p class="stage-card__text">Размещение гаражей<br class="br-d">для гостевого<br class="br-d">автотранспорта</p>
+
+          <div class="stage-slide">
+            <div class="stage-card stage-card--7 fade-in">
+              <span class="stage-card__num">7</span>
+              <p class="stage-card__text">Создание аэропорта «Большие Васюки»<br> с регулярным отправлением почтовых<br>самолётов и дирижаблей во все концы<br class="br-d"> света,<br class="br-m"> включая Лос-Анджелос и Мельбурн</p>
+            </div>
           </div>
-          <div class="stage-card fade-in">
-            <span class="stage-card__num">6</span>
-            <p class="stage-card__text">Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</p>
-          </div>
-          <div class="stage-card fade-in">
-            <span class="stage-card__num">7</span>
-            <p class="stage-card__text">Создание аэропорта «Большие Васюки»<br class="br-d">с регулярным отправлением почтовых<br class="br-d">самолётов и дирижаблей во все концы<br class="br-d">света, включая Лос-Анджелос и Мельбурн</p>
-          </div>
+
           <img class="stages__plane" src="img/stages-airplane.png" alt="" aria-hidden="true">
         </div>
       </div>
@@ -169,6 +186,13 @@
             <path d="M10 2L2 10L10 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
+        <div class="stages__dots" id="stagesDots">
+          <span class="stages__dot stages__dot--active"></span>
+          <span class="stages__dot"></span>
+          <span class="stages__dot"></span>
+          <span class="stages__dot"></span>
+          <span class="stages__dot"></span>
+        </div>
         <span class="stages__counter" id="stagesCounter" aria-live="polite">1 / 7</span>
         <button class="carousel-btn carousel-btn--next" id="stagesNext" aria-label="Следующий этап">
           <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -276,8 +300,8 @@
   <footer class="footer">
     <div class="container">
       <p class="footer__note">
-        Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта.
-        С подробностями можно познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».
+        Все персонажи, события и цитаты<br class="br-m"> являются вымышленными<br class="br-m"> и не принадлежат создателям сайта.<br class="br-m">
+        С подробностями можно познакомиться<br class="br-m"> в главе XXXIV романа Ильи Ильфа<br class="br-m"> и Евгения Петрова «Двенадцать стульев».
       </p>
     </div>
   </footer>
